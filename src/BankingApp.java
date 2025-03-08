@@ -5,12 +5,13 @@ import java.util.Scanner;
 import static java.lang.Class.forName;
 
 public class BankingApp {
-    private static final String url = "jdbc:mysql://localhost:3306/bank_system";
-    private static final String username = "root";
-    private static final String password = "Admin@2807";
+    private static final String url = "Your MySQL Database URL";
+    private static final String username = "Username by default root";
+    private static final String password = "Enter Your Local MySQL Database Password";
 
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         try{
+            //This is the mysql jdbc driver if you are using some other database import that particular driver
             Class.forName("com.mysql.cj.jdbc.Driver");
         }catch (ClassNotFoundException e){
             System.out.println(e.getMessage());
